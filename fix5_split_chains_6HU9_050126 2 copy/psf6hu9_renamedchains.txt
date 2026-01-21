@@ -3,7 +3,7 @@
 # --------------------------------------------------
 package require psfgen
 resetpsf
-#helllo
+
 # --------------------------------------------------
 # Load topology / stream files
 # --------------------------------------------------
@@ -25,11 +25,13 @@ topology disu_cu_new.str
 
 topology glu_cu_new.str   
 
-topology his_cu_new.str
+topology his_cu_new.str #HIS_CU ND1 to CU2P
 
 topology met_cu_new.str
 
-topology his_cua_new.str
+topology his_cua_new.str #HIS_CU2 NE2 to CU1P
+
+topology his_cu_new2.str
 
 # --------------------------------------------------
 # Aliases (common issues)
@@ -123,17 +125,24 @@ coordpdb metals.pdb    META
 patch PHEM PROA:376 HEME:536
 patch PHEM PROA:378 HEME:535
 patch PHEM PROA:62  HEME:535
+
 #crosslink
 patch TYM_HIS PROA:245 PROA:241
-patch HIS_CU2 PROA:241 META:906
+#HIS ND1 to copper
+#patch HIS_CU3 PROA:241 META:906
+
+#HIS NE2 to copper
 patch HIS_CU2 PROA:290 META:906
 patch HIS_CU2 PROA:291 META:906
+
 #to copper
 patch CYS_CU PROB:746 META:910
 patch CYS_CU PROB:746 META:909
 patch CYS_CU PROB:742 META:910
 patch CYS_CU PROB:742 META:909
 patch GLU_CU_B PROB:744 META:910
+
+#HIS ND1 to copper
 patch HIS_CU PROB:750 META:910
 patch HIS_CU PROB:707 META:909
 patch MET_CU PROB:753 META:909
