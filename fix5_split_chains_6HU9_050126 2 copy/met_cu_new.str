@@ -1,0 +1,17 @@
+* MET–Cu coordination patch (SD)
+*
+36 1
+
+PRES MET_CU 0.00
+
+! Bond methionine sulfur to copper
+BOND 1SD 2CU2P
+
+! Internal coordinates to place Cu relative to MET
+! Typical Cu–S(thioether) distance ~2.3 Å
+IC 1CG  1SD 2CU2P  1CE   2.30 110.0 180.0 110.0 2.00
+IC 1SD  1CG 2CU2P  1CB   2.30 110.0  60.0 110.0 2.00
+IC 1CE  1SD 2CU2P  1CG   2.30 110.0 -60.0 110.0 2.00
+
+END
+
