@@ -23,15 +23,17 @@ topology tyr_his.str
 
 #3 topology his_cu_new2.str 
 
-#topology disu_cu_new.str
+topology disu_cu_new.str
 
-#topology glu_cu_new.str   
+topology glu_cu_new.str   
 
-#topology his_cu_new.str #HIS_CU ND1 to CU2P
+topology his_cu_new.str #HIS_CU ND1 to CU2P
 
-#topology met_cu_new.str
+topology met_cu_new.str
 
-#topology his_cu2.str #HIS_CU2 NE2 to CU1P
+topology his_cu2.str #HIS_CU2 NE2 to CU1P
+
+topology his_cu_new2.str
 
 
 # --------------------------------------------------

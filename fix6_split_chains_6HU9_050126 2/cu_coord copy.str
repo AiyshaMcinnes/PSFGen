@@ -1,11 +1,7 @@
-! Histidine bound to Cu2P via ND1
-!------------------------
-PATCH HIS_ND_CUB HSE CU2P
-BOND 1ND1 2CU2P
-IC 1CG  1ND1 2CU2P  1CE1  2.05 120.0 180.0 120.0 2.00
-IC 1ND1 1CG  2CU2P  1CB   2.05 120.0  60.0 120.0 2.00
-IC 1CE1 1ND1 2CU2P  1NE2  2.05 120.0 -60.0 120.0 2.00
-END
+*------------------------------------------------------------
+* Custom Cu Coordination Patches
+* For use with psfgen
+*------------------------------------------------------------
 
 !------------------------
 ! Glutamate bound to Cu2P
@@ -54,7 +50,16 @@ PATCH HIS_NE_CU HIS CU1P
 BOND 1NE2 2CU1P
 IC 1CD2  1NE2 2CU1P  1CE1  2.05 120.0 180.0 120.0 2.00
 IC 1NE2  1CD2 2CU1P  1CB   2.05 120.0  60.0 120.0 2.00
-IC 1CE1 1NE2 2CU1P  1ND1  2.05 120.0 -60.0 120.0 2.00
+IC 1CE1  1NE2 2CU1P  1ND1  2.05 120.0 -60.0 120.0 2.00
 END
+
+PATCH HIS_ND_CUB HIS CU2P
+BOND 1ND1 2CU2P
+IC 1CG  1ND1 2CU2P  1CE1  2.05 120.0 180.0 120.0 2.00
+IC 1ND1 1CG  2CU2P  1CB   2.05 120.0  60.0 120.0 2.00
+IC 1CE1 1ND1 2CU2P  1NE2  2.05 120.0 -60.0 120.0 2.00
+END
+
+
 
 

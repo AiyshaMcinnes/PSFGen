@@ -1,6 +1,6 @@
 PSF CMAP
 
-      40 !NTITLE
+      39 !NTITLE
  REMARKS original generated structure x-plor psf file
  REMARKS 21 patches were applied to the molecule.
  REMARKS topology top_all36_prot.rtf 
@@ -8,13 +8,12 @@ PSF CMAP
  REMARKS topology toppar_ions_won.str 
  REMARKS topology toppar_water_ion.str 
  REMARKS topology tyr_his.str 
- REMARKS topology disu_cu_new.str 
  REMARKS topology glu_cu_new.str 
  REMARKS topology his_cu_new.str 
- REMARKS topology disu_cu_new.rtf 
- REMARKS topology glu_cu.str 
  REMARKS topology met_cu_new.str 
- REMARKS topology his_cua_new.str 
+ REMARKS topology his_cu2.str 
+ REMARKS topology his_cu_new2.str 
+ REMARKS topology disu_cu_new.str 
  REMARKS segment PROA { first NTER; last CTER; auto angles dihedrals }
  REMARKS segment PROB { first NTER; last CTER; auto angles dihedrals }
  REMARKS segment PROC { first NTER; last CTER; auto angles dihedrals }
@@ -30,7 +29,7 @@ PSF CMAP
  REMARKS patch PHEM PROA:378  HEME:535  
  REMARKS patch PHEM PROA:62  HEME:535  
  REMARKS patch TYM_HIS PROA:245  PROA:241  
- REMARKS patch HIS_CU2 PROA:241  META:906  
+ REMARKS patch HIS_CU3 PROA:241  META:906  
  REMARKS patch HIS_CU2 PROA:290  META:906  
  REMARKS patch HIS_CU2 PROA:291  META:906  
  REMARKS patch CYS_CU PROB:746  META:910  
@@ -40,7 +39,7 @@ PSF CMAP
  REMARKS patch GLU_CU_B PROB:744  META:910  
  REMARKS patch HIS_CU PROB:750  META:910  
  REMARKS patch HIS_CU PROB:707  META:909  
- REMARKS patch MET_CU PROB:753  META:909  
+ REMARKS patch MET_CU_SD PROB:753  META:909  
 
    14346 !NATOM
        1 PROA 1    MET  N    NH3   -0.300000       14.0070           0
@@ -15338,9 +15337,9 @@ PSF CMAP
     3724    3725    3724    3726    3726    3727    3726    3728
     3729    3726    3729    3731    3730    3729    3731    3732
     3731    3733    3733    3734    3735    3733    3735    3736
-    3735    3737    3738    3740    3738    3739    3740    3735
-    3740    3744    3741    3738    3741    3742    3741    3743
-    3743   14342    3743    3744    3744    3745    3746    3733
+    3735    3737    3738   14342    3738    3740    3738    3739
+    3740    3735    3740    3744    3741    3738    3741    3742
+    3741    3743    3743    3744    3744    3745    3746    3733
     3746    3748    3747    3746    3748    3752    3748    3749
     3750    3749    3751    3749    3752    3754    3753    3752
     3754    3757    3755    3754    3756    3754    3757    3749
