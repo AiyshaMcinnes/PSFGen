@@ -19,19 +19,20 @@ topology toppar_ions_won.str
 # Water topology
 topology toppar_water_ion.str
 
-topology tyr_his.str 
+topology tyr_his.str
 
-topology disu_cu_new.str
+#3 topology his_cu_new2.str 
 
-topology glu_cu_new.str   
+#topology disu_cu_new.str
 
-topology his_cu_new.str #HIS_CU ND1 to CU2P
+#topology glu_cu_new.str   
+
+#2 topology his_cu_new.str #HIS_CU ND1 to CU2P
 
 topology met_cu_new.str
 
-topology his_cua_new.str #HIS_CU2 NE2 to CU1P
+#1 topology his_cua_new.str #HIS_CU2 NE2 to CU1P
 
-topology his_cu_new2.str
 
 # --------------------------------------------------
 # Aliases (common issues)
@@ -129,7 +130,7 @@ patch PHEM PROA:62  HEME:535
 #crosslink
 patch TYM_HIS PROA:245 PROA:241
 #HIS ND1 to copper
-#patch HIS_CU3 PROA:241 META:906
+patch HIS_CU3 PROA:241 META:906
 
 #HIS NE2 to copper
 patch HIS_CU2 PROA:290 META:906
