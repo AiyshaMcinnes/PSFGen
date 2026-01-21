@@ -27,11 +27,11 @@ topology tyr_his.str
 
 #topology glu_cu_new.str   
 
-#2 topology his_cu_new.str #HIS_CU ND1 to CU2P
+#topology his_cu_new.str #HIS_CU ND1 to CU2P
 
-topology met_cu_new.str
+#topology met_cu_new.str
 
-#1 topology his_cua_new.str #HIS_CU2 NE2 to CU1P
+#topology his_cu2.str #HIS_CU2 NE2 to CU1P
 
 
 # --------------------------------------------------
@@ -146,7 +146,7 @@ patch GLU_CU_B PROB:744 META:910
 #HIS ND1 to copper
 patch HIS_CU PROB:750 META:910
 patch HIS_CU PROB:707 META:909
-patch MET_CU PROB:753 META:909
+patch MET_CU_SD PROB:753 META:909
 
 
 

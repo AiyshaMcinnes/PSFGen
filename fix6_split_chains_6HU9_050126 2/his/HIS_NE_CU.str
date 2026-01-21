@@ -1,0 +1,11 @@
+PRES HIS_NE_CU 0.00
+! Bond Cu to histidine NE2
+BOND 1NE2 2CU1P
+
+! Internal coordinates to place Cu relative to the imidazole ring
+IC 1CD2  1NE2 2CU1P  1CE1  2.05 120.0 180.0 120.0 2.00
+IC 1NE2  1CD2 2CU1P  1CB   2.05 120.0  60.0 120.0 2.00
+IC 1CE1  1NE2 2CU1P  1ND1  2.05 120.0 -60.0 120.0 2.00
+
+END
+

@@ -1,0 +1,176 @@
+# --------------------------------------------------
+# Load psfgen
+# --------------------------------------------------
+package require psfgen
+resetpsf
+
+# --------------------------------------------------
+# Load topology / stream files
+# --------------------------------------------------
+# Standard protein topology
+topology top_all36_prot.rtf
+
+# HEME topology (contains residue + patches)
+topology toppar_all36_prot_heme.str
+
+# Copper topology (if custom or CHARMM-GUI provided)
+topology toppar_ions_won.str
+
+# Water topology
+topology toppar_water_ion.str
+
+topology tyr_his.str 
+
+topology cu_coord.str
+#topology disu_cu_new.str
+
+#topology glu_cu_new.str   
+
+#topology met_cu_new.str
+
+#topology his_ne_cu.str  #works
+
+#topology his_nd_cu.str
+
+#topology his_cu_new.str #PRES HIS_CU2
+
+#topology his_cu1_new.str #PRES HIS_CU1
+
+
+# --------------------------------------------------
+# Aliases (common issues)
+# --------------------------------------------------
+pdbalias residue HIS HSE
+pdbalias atom ILE CD1 CD
+
+# HEME naming sometimes differs
+#pdbalias residue HEA HEME
+
+# Copper naming
+pdbalias residue CU1P Cu1p
+pdbalias atom    Cu1p CU1P Cu1p
+pdbalias residue CU2P Cu2p
+pdbalias atom    Cu2p CU2P Cu2p
+
+# Calcium aliases (CORRECT)
+pdbalias residue CAL  Ca2p
+pdbalias atom    Ca2p CAL Ca
+
+# magnesium aliases (CORRECT)
+pdbalias residue MG   Mg2p
+pdbalias atom    Mg2p MG Mg
+
+# --------------------------------------------------
+# Protein chains
+# --------------------------------------------------
+segment PROA {
+    pdb new2_proteinA.pdb
+    first NTER
+    last  CTER
+}
+
+segment PROB {
+    pdb new2_proteinB.pdb
+    first NTER
+    last  CTER
+}
+
+segment PROC {
+    pdb protein_C.pdb
+    first NTER
+    last  CTER
+}
+
+# --------------------------------------------------
+# Cofactors / non-protein
+# --------------------------------------------------
+segment HEME {
+    pdb heme.pdb
+}
+
+segment META {
+    pdb metals.pdb
+}
+
+#segment IONS {
+#    pdb ions.pdb
+#}
+
+#segment LIP {
+#    pdb lipids.pdb
+#}
+
+#segment WAT {
+#    pdb water.pdb
+#}
+
+# --------------------------------------------------
+# Assign coordinates
+# --------------------------------------------------
+coordpdb new2_proteinA.pdb PROA
+coordpdb new2_proteinB.pdb PROB
+coordpdb protein_C.pdb PROC
+coordpdb heme.pdb      HEME
+coordpdb metals.pdb    META
+#coordpdb ions.pdb      IONS
+#coordpdb lipids.pdb    LIP
+#coordpdb water.pdb     WAT
+
+
+# --------------------------------------------------
+# HEME–protein linkage (example)
+# --------------------------------------------------
+# 
+# HEME
+patch PHEM PROA:376 HEME:536
+patch PHEM PROA:378 HEME:535
+patch PHEM PROA:62  HEME:535
+
+#copper B
+#crosslink
+patch TYM_HIS PROA:245 PROA:241
+#His to copper ND1 to CU1
+#patch HIS_ND_CU PROA:241 META:906
+
+#HIS NE to CU1 (works)
+patch HIS_NE_CU PROA:290 META:906
+patch HIS_NE_CU PROA:291 META:906
+
+
+#to copper a binuclear	
+patch CYS_CU PROB:746 META:910
+patch CYS_CU PROB:746 META:909
+patch CYS_CU PROB:742 META:910
+patch CYS_CU PROB:742 META:909
+#patch GLU_CU_B PROB:744 META:910
+
+#HIS ND1 to CU2P 
+#patch HIS_ND_CU2 PROB:750 META:910
+#ND1 to CU2P
+#patch HIS_ND_CU2 PROB:707 META:909
+#patch MET_CU PROB:753 META:909
+
+#patch CYS_CU PROB:746 PROB:742
+
+#patch DISU PROB:746 PROB:742
+
+# --------------------------------------------------
+# Copper coordination (example)
+# --------------------------------------------------
+# This depends entirely on how Cu is modeled
+# Example patch name only — check your .str file
+#patch META PROT:300 PROT:87
+
+# --------------------------------------------------
+# Guess missing atoms
+# --------------------------------------------------
+guesscoord
+
+# --------------------------------------------------
+# Write output
+# --------------------------------------------------
+writepsf protein_heme_cu.psf
+writepdb protein_heme_cu.pdb
+
+puts "PSF/PDB generation completed successfully."
+

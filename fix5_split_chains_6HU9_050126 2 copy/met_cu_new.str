@@ -2,7 +2,7 @@
 *
 36 1
 
-PRES MET_CU 0.00
+PRES MET_CU_SD 0.00
 
 ! Bond methionine sulfur to copper
 BOND 1SD 2CU2P

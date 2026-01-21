@@ -1,0 +1,54 @@
+*------------------------------------------------------------
+* Custom Cu Coordination Residues
+* For use with psfgen
+*------------------------------------------------------------
+
+!------------------------
+! Glutamate bound to Cu2P
+!------------------------
+PRES GLU_CU_B 0.00
+BOND 1O 2CU2P
+IC 1C   1O  2CU2P  1CA  2.00 120.0 180.0 120.0 2.00
+IC 1O   1C  2CU2P  1CA  2.00 120.0  60.0 120.0 2.00
+IC 1CA  1C  2CU2P  1N   2.00 120.0 -60.0 120.0 2.00
+END
+
+!------------------------
+! Cysteine bound to Cu2P
+!------------------------
+PRES CYS_CU 0.00
+BOND 1SG 2CU2P
+IC 1CB 1SG 2CU2P 1CA  2.25 110.0 180.0 110.0 2.00
+IC 1CA 1SG 2CU2P 1CB  2.25 110.0  60.0 110.0 2.00
+IC 1N  1SG 2CU2P 1CB  2.25 110.0 -60.0 110.0 2.00
+END
+
+!------------------------
+! Methionine bound to Cu2P
+!------------------------
+PRES MET_CU 0.00
+BOND 1SD 2CU2P
+IC 1CG  1SD 2CU2P  1CE   2.30 110.0 180.0 110.0 2.00
+IC 1SD  1CG 2CU2P  1CB   2.30 110.0  60.0 110.0 2.00
+IC 1CE  1SD 2CU2P  1CG   2.30 110.0 -60.0 110.0 2.00
+END
+
+!------------------------
+! Histidine bound to Cu1P via ND1
+!------------------------
+PRES HIS_ND_CU 0.00
+BOND 1ND1 2CU1P
+IC 1CG  1ND1 2CU1P  1CE1  2.05 120.0 180.0 120.0 2.00
+IC 1ND1 1CG  2CU1P  1CB   2.05 120.0  60.0 120.0 2.00
+IC 1CE1 1ND1 2CU1P  1NE2  2.05 120.0 -60.0 120.0 2.00
+END
+
+!------------------------
+! Histidine bound to Cu1P via NE2
+!------------------------
+PRES HIS_NE_CU 0.00
+BOND 1NE2 2CU1P
+IC 1CD2  1NE2 2CU1P  1CE1  2.05 120.0 180.0 120.0 2.00
+IC 1NE2  1CD2 2CU1P  1CB   2.05 120.0  60.0 120.0 2.00
+IC 1CE1  1NE2 2CU1P  1ND1  2.05 120.0 -60.0 120.0 2.00
+END
