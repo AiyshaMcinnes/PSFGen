@@ -56,7 +56,7 @@ MASS  -1  LIT        6.94100 LI ! Lithium ion
 !MASS  -1  SOD       22.98977 NA ! Sodium Ion
 MASS  -1  MG        24.30500 MG ! Magnesium Ion
 MASS  -1  POT       39.09830 K ! Potassium Ion
-!MASS  -1  CAL       40.08000 CA ! Calcium Ion
+MASS  -1  CAL       40.08000 CA ! Calcium Ion
 MASS  -1  RUB       85.46780 RB ! Rubidium Ion
 MASS  -1  CES      132.90545 CS ! Cesium Ion
 MASS  -1  BAR      137.32700 BA ! Barium Ion

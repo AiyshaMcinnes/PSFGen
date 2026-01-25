@@ -3,8 +3,8 @@ REMARK    THIS IS A SIMULATION BOX
 CRYST1  120.773  120.773  171.441  90.00  90.00  90.00 P 1           1
 MODEL        1
 ATOM      1 CU1P CU1PE 906      64.060  67.990  92.970  1.00  0.00           C
-ATOM      2  CAL CAL E 907      54.350  43.600 104.230  1.00  0.00           C
-ATOM      3  MG   MG E 908      63.950  62.200 104.340  1.00  0.00            
+ATOM      2  CAL CAL E 907      54.350  43.600 104.230  1.00  0.00           Ca
+ATOM      3  MG   MG E 908      63.950  62.200 104.340  1.00  0.00           Mg
 ATOM      4 CU2P CU2PE 909      64.030  56.080 113.430  1.00  0.00           C
 ATOM      5 CU2P CU2PE 910      63.000  55.260 110.520  1.00  0.00           C
 TER
