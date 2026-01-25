@@ -97,8 +97,16 @@ segment IONS {
     pdb ions.pdb
 }
 
-segment LIP {
-    pdb lipids.pdb
+segment POPC {
+    pdb POPC.pdb
+}
+
+segment POPE {
+    pdb POPE.pdb
+}
+
+segment TOCL {
+    pdb TOCL.pdb
 }
 
 segment WAT {
