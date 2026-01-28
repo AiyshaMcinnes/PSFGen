@@ -17,27 +17,12 @@ topology toppar_all36_prot_heme.str
 topology toppar_ions_won.str
 
 # Water topology
-topology toppar_water_ion.str 
-
+#topology toppar_water_ion.str 
 topology top_all36_lipid.rtf
 
 topology toppar_all36_lipid_cardiolipin.str
 
-
-topology tyr_his.str
-
-topology disu_cu_new.str
-
-topology glu_cu_new.str   
-
-topology his_cu_new.str #HIS_CU ND1 to CU2P
-
-topology met_cu_new.str
-
-topology his_cu2.str #HIS_CU2 NE2 to CU1P
-
-topology his_cu_new2.str #HIS_CU3 ND1 to CU1P
-
+topology aiysha_topology.str
 
 # --------------------------------------------------
 # Aliases (common issues)
@@ -60,12 +45,12 @@ pdbalias residue TOCL TOCL2
 
 
 # Calcium aliases (CORRECT)
-#pdbalias residue CAL  Ca2p
-#pdbalias atom    Ca2p CAL Ca
+pdbalias residue CAL  Ca2p
+pdbalias atom    Ca2p CAL Ca
 
 # magnesium aliases (CORRECT)
-#pdbalias residue MG   Mg2p
-#pdbalias atom    Mg2p MG Mg
+pdbalias residue MG   Mg2p
+pdbalias atom    Mg2p MG Mg
 
 
 # --------------------------------------------------
@@ -100,9 +85,9 @@ segment META {
     pdb metals.pdb
 }
 
-segment IONS {
-    pdb ions.pdb
-}
+#segment IONS {
+#    pdb ions.pdb
+#}
 
 segment POPC {
     pdb POPC.pdb
@@ -116,9 +101,9 @@ segment TOCL {
     pdb TOCL.pdb
 }
 
-segment WAT {
-    pdb new_water.pdb
-}
+#segment WAT {
+#    pdb new_water.pdb
+#}
 
 # --------------------------------------------------
 # Assign coordinates
@@ -128,11 +113,11 @@ coordpdb new_proteinB.pdb PROB
 coordpdb protein_C.pdb PROC
 coordpdb heme.pdb      HEME
 coordpdb metals.pdb    META
-coordpdb ions.pdb      IONS
+#coordpdb ions.pdb      IONS
 coordpdb POPE.pdb      POPE
 coordpdb POPC.pdb      POPC
 coordpdb TOCL.pdb      TOCL
-coordpdb new_water.pdb WAT
+#coordpdb new_water.pdb WAT
 
 
 # --------------------------------------------------
@@ -187,8 +172,8 @@ guesscoord
 # --------------------------------------------------
 # Write output
 # --------------------------------------------------
-writepsf protein_heme_cu.psf
-writepdb protein_heme_cu.pdb
+writepsf protein_nowater.psf
+writepdb protein_nowater.pdb
 
 puts "PSF/PDB generation completed successfully."
 

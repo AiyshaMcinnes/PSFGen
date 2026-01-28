@@ -1,6 +1,6 @@
 PSF CMAP
 
-      40 !NTITLE
+      46 !NTITLE
  REMARKS original generated structure x-plor psf file
  REMARKS 21 patches were applied to the molecule.
  REMARKS topology top_all36_prot.rtf 
@@ -9,7 +9,13 @@ PSF CMAP
  REMARKS topology toppar_water_ion.str 
  REMARKS topology top_all36_lipid.rtf 
  REMARKS topology toppar_all36_lipid_cardiolipin.str 
- REMARKS topology aiysha_topology.str 
+ REMARKS topology tyr_his.str 
+ REMARKS topology disu_cu_new.str 
+ REMARKS topology glu_cu_new.str 
+ REMARKS topology met_cu_new.str 
+ REMARKS topology his_cu2.str 
+ REMARKS topology his_cu_new2.str 
+ REMARKS topology his_cu_new.str 
  REMARKS segment PROA { first NTER; last CTER; auto angles dihedrals }
  REMARKS segment PROB { first NTER; last CTER; auto angles dihedrals }
  REMARKS segment PROC { first NTER; last CTER; auto angles dihedrals }
