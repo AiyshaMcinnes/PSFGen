@@ -17,12 +17,9 @@ topology toppar_all36_prot_heme.str
 topology toppar_ions_won.str
 
 # Water topology
-topology toppar_water_ion.str 
+topology toppar_water_ion.str
 
 topology top_all36_lipid.rtf
-
-topology toppar_all36_lipid_cardiolipin.str
-
 
 topology tyr_his.str
 
@@ -36,7 +33,7 @@ topology met_cu_new.str
 
 topology his_cu2.str #HIS_CU2 NE2 to CU1P
 
-topology his_cu_new2.str #HIS_CU3 ND1 to CU1P
+topology his_cu_new2.str
 
 
 # --------------------------------------------------
@@ -53,10 +50,6 @@ pdbalias residue CU1P Cu1p
 pdbalias atom    Cu1p CU1P Cu1p
 pdbalias residue CU2P Cu2p
 pdbalias atom    Cu2p CU2P Cu2p
-
-# TOCL alisas
-
-pdbalias residue TOCL TOCL2
 
 
 # Calcium aliases (CORRECT)
@@ -78,7 +71,7 @@ segment PROA {
 }
 
 segment PROB {
-    pdb new_proteinB.pdb
+    pdb new2_proteinB.pdb
     first NTER
     last  CTER
 }
@@ -116,23 +109,34 @@ segment TOCL {
     pdb TOCL.pdb
 }
 
+<<<<<<< HEAD
 #segment WAT {
 #    pdb new_water.pdb
 #}
+=======
+segment WAT {
+    pdb water.pdb
+}
+>>>>>>> parent of 0eb1562 (acquired topology file)
 
 # --------------------------------------------------
 # Assign coordinates
 # --------------------------------------------------
 coordpdb protein_A_new.pdb PROA
-coordpdb new_proteinB.pdb PROB
+coordpdb new2_proteinB.pdb PROB
 coordpdb protein_C.pdb PROC
 coordpdb heme.pdb      HEME
 coordpdb metals.pdb    META
 coordpdb ions.pdb      IONS
+<<<<<<< HEAD
 coordpdb POPE.pdb      POPE
 coordpdb POPC.pdb      POPC
 coordpdb TOCL.pdb      TOCL
 #coordpdb new_water.pdb WAT
+=======
+coordpdb lipids.pdb    LIP
+coordpdb water.pdb     WAT
+>>>>>>> parent of 0eb1562 (acquired topology file)
 
 
 # --------------------------------------------------
