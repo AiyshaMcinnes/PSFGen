@@ -1,0 +1,7 @@
+REMARK original generated coordinate pdb file
+ATOM      1 CU1P CU1PE 906      64.060  67.990  92.970  1.00  0.00      METACU
+ATOM      2 CA2P CA2PE 907       0.000   0.000   0.000 -1.00  0.00      METACA
+ATOM      3 MG2P MG2PE 908       0.000   0.000   0.000 -1.00  0.00      METAMG
+ATOM      4 CU2P CU2PE 909      64.030  56.080 113.430  1.00  0.00      METACU
+ATOM      5 CU2P CU2PE 910      63.000  55.260 110.520  1.00  0.00      METACU
+END

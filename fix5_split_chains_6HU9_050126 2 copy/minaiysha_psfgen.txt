@@ -8,21 +8,21 @@ resetpsf
 # Load topology / stream files
 # --------------------------------------------------
 # Standard protein topology
-topology top_all36_prot.rtf
+#topology top_all36_prot.rtf
 
 # HEME topology (contains residue + patches)
-topology toppar_all36_prot_heme.str
+#topology toppar_all36_prot_heme.str
 
 # Copper topology (if custom or CHARMM-GUI provided)
 topology toppar_ions_won.str
 
 # Water topology
 #topology toppar_water_ion.str 
-topology top_all36_lipid.rtf
+#topology top_all36_lipid.rtf
 
-topology toppar_all36_lipid_cardiolipin.str
+#topology toppar_all36_lipid_cardiolipin.str
 
-topology aiysha_topology.str
+#topology aiysha_topology.str
 
 # --------------------------------------------------
 # Aliases (common issues)
@@ -56,30 +56,30 @@ pdbalias atom    Mg2p MG Mg
 # --------------------------------------------------
 # Protein chains
 # --------------------------------------------------
-segment PROA {
-    pdb protein_A_new.pdb
-    first NTER
-    last  CTER
-}
+#segment PROA {
+#    pdb protein_A_new.pdb
+#    first NTER
+#    last  CTER
+#}
 
-segment PROB {
-    pdb new_proteinB.pdb
-    first NTER
-    last  CTER
-}
+#segment PROB {
+#    pdb new_proteinB.pdb
+#    first NTER
+#    last  CTER
+#}
 
-segment PROC {
-    pdb protein_C.pdb
-    first NTER
-    last  CTER
-}
+#segment PROC {
+#    pdb protein_C.pdb
+#    first NTER
+#    last  CTER
+#}
 
 # --------------------------------------------------
 # Cofactors / non-protein
 # --------------------------------------------------
-segment HEME {
-    pdb heme.pdb
-}
+#segment HEME {
+#    pdb heme.pdb
+#}
 
 segment META {
     pdb metals.pdb
@@ -89,17 +89,17 @@ segment META {
 #    pdb ions.pdb
 #}
 
-segment POPC {
-    pdb POPC.pdb
-}
+#segment POPC {
+###    pdb POPC.pdb
+#}
 
-segment POPE {
-    pdb POPE.pdb
-}
+#segment POPE {
+#    pdb POPE.pdb
+#}
 
-segment TOCL {
-    pdb TOCL.pdb
-}
+#segment TOCL {
+#    pdb TOCL.pdb
+#}
 
 #segment WAT {
 #    pdb new_water.pdb
@@ -108,15 +108,15 @@ segment TOCL {
 # --------------------------------------------------
 # Assign coordinates
 # --------------------------------------------------
-coordpdb protein_A_new.pdb PROA
-coordpdb new_proteinB.pdb PROB
-coordpdb protein_C.pdb PROC
-coordpdb heme.pdb      HEME
+#coordpdb protein_A_new.pdb PROA
+#coordpdb new_proteinB.pdb PROB
+#coordpdb protein_C.pdb PROC
+#coordpdb heme.pdb      HEME
 coordpdb metals.pdb    META
 #coordpdb ions.pdb      IONS
-coordpdb POPE.pdb      POPE
-coordpdb POPC.pdb      POPC
-coordpdb TOCL.pdb      TOCL
+#coordpdb POPE.pdb      POPE
+#coordpdb POPC.pdb      POPC
+#coordpdb TOCL.pdb      TOCL
 #coordpdb new_water.pdb WAT
 
 
@@ -125,30 +125,30 @@ coordpdb TOCL.pdb      TOCL
 # --------------------------------------------------
 # Typical Cys–HEME thioether bonds
 # (adjust residue numbers!)
-patch PHEM PROA:376 HEME:536
-patch PHEM PROA:378 HEME:535
-patch PHEM PROA:62  HEME:535
+#patch PHEM PROA:376 HEME:536
+#patch PHEM PROA:378 HEME:535
+#patch PHEM PROA:62  HEME:535
 
 #crosslink
-patch TYM_HIS PROA:245 PROA:241
+#patch TYM_HIS PROA:245 PROA:241
 #HIS ND1 to copper
-patch HIS_CU3 PROA:241 META:906
+#patch HIS_CU3 PROA:241 META:906
 
 #HIS NE2 to copper
-patch HIS_CU2 PROA:290 META:906
-patch HIS_CU2 PROA:291 META:906
+#patch HIS_CU2 PROA:290 META:906
+#patch HIS_CU2 PROA:291 META:906
 
 #to copper
-patch CYS_CU PROB:746 META:910
-patch CYS_CU PROB:746 META:909
-patch CYS_CU PROB:742 META:910
-patch CYS_CU PROB:742 META:909
-patch GLU_CU_B PROB:744 META:910
+#patch CYS_CU PROB:746 META:910
+#patch CYS_CU PROB:746 META:909
+#patch CYS_CU PROB:742 META:910
+#patch CYS_CU PROB:742 META:909
+#patch GLU_CU_B PROB:744 META:910
 
 #HIS ND1 to copper
-patch HIS_CU PROB:750 META:910
-patch HIS_CU PROB:707 META:909
-patch MET_CU_SD PROB:753 META:909
+#patch HIS_CU PROB:750 META:910
+#patch HIS_CU PROB:707 META:909
+#patch MET_CU_SD PROB:753 META:909
 
 
 
@@ -172,8 +172,8 @@ guesscoord
 # --------------------------------------------------
 # Write output
 # --------------------------------------------------
-writepsf bond_nowater.psf
-writepdb bond_nowater.pdb
+writepsf metalscheck.psf
+writepdb metalscheck.pdb
 
 puts "PSF/PDB generation completed successfully."
 

@@ -1,0 +1,39 @@
+PSF
+
+       3 !NTITLE
+ REMARKS original generated structure x-plor psf file
+ REMARKS topology toppar_ions_won.str 
+ REMARKS segment META { first NONE; last NONE; auto none  }
+
+       5 !NATOM
+       1 META 906  CU1P CU1P CU1P   1.000000       63.5460           0
+       2 META 907  CA2P CA2P CA2P   2.000000       40.0780           0
+       3 META 908  MG2P MG2P MG2P   2.000000       24.3050           0
+       4 META 909  CU2P CU2P CU2P   2.000000       63.5460           0
+       5 META 910  CU2P CU2P CU2P   2.000000       63.5460           0
+
+       0 !NBOND: bonds
+
+
+       0 !NTHETA: angles
+
+
+       0 !NPHI: dihedrals
+
+
+       0 !NIMPHI: impropers
+
+
+       0 !NDON: donors
+
+
+       0 !NACC: acceptors
+
+
+       0 !NNB
+
+       0       0       0       0       0
+
+       1       0 !NGRP
+       0       0       0
+
